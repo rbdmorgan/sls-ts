@@ -1,6 +1,6 @@
-service: sls-ts-starter
+service: sls-ts
 
-frameworkVersion: "2"
+frameworkVersion: '2'
 
 provider:
   name: aws
