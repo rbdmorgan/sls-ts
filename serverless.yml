@@ -1,0 +1,26 @@
+service: sls-ts-starter
+
+frameworkVersion: "2"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+
+functions:
+  # hello:
+  #   handler: hello.handler
+  #   events:
+  #     - http:
+  #         method: get
+  #         path: /hello
+  app:
+    handler: app.handler
+    events:
+      - http:
+          method: ANY
+          path: /{proxy+}
